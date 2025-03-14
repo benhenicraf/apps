@@ -1,0 +1,36 @@
+.tracking-container {
+    display: flex;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.unit-list {
+    width: 280px;
+    padding: 10px;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    background: #fafafa;
+}
+
+.unit-list h3 {
+    margin-top: 0;
+}
+
+.unit-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.unit-list li {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.unit-list li:hover {
+    background-color: #ececec;
+}
+
+.tracking-map {
+    flex-grow: 1;
+}

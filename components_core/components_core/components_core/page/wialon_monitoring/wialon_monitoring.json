@@ -1,0 +1,24 @@
+{
+    "content": null,
+    "creation": "2025-03-04 20:59:57.765937",
+    "docstatus": 0,
+    "doctype": "Page",
+    "idx": 0,
+    "modified": "2025-03-04 20:59:57.765937",
+    "modified_by": "Administrator",
+    "module": "Components Core",
+    "name": "wialon-monitoring",
+    "owner": "Administrator",
+    "page_name": "wialon-monitoring",
+    "roles": [
+     {
+      "role": "System Manager" 
+     }
+    ],
+    "script": null,
+    "standard": "Yes",
+    "style": null,
+    "system_page": 0,
+    "app": "components_core",
+    "scripts": ["/assets/components_core/js/wialon_map.js"]
+   }

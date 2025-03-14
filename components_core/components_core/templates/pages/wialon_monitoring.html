@@ -1,0 +1,53 @@
+<!-- wialon_monitoring.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wialon Monitoring</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="/assets/components_core/css/map-style.css"/>
+    <!-- Added Font Awesome for icons in map controls -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+    <div class="map-container">
+        <!-- Explicit height ensures map renders correctly -->
+        <div id="map" style="height: 600px; width: 100%;"></div>
+        {% include "components_core/templates/includes/map_controls.html" %}
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="/assets/components_core/js/wialon_map.js"></script>
+    <script>
+        // Initialize map if not already defined by wialon_map.js
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof cur_map === 'undefined') {
+                var map = L.map('map').setView([0, 0], 2);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wialon Monitoring</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+</head>
+<body>
+    <div id="map" style="height:600px;width:100%;"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="/assets/components_core/js/wialon_monitoring.js"></script>
+</body>
+</html> -->

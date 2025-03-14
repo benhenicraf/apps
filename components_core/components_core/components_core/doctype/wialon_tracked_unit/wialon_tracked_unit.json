@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-13 08:38:32.433351",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "wialon_unit_info_section",
+  "unit_id",
+  "unit_name",
+  "latitude",
+  "longitude",
+  "last_update"
+ ],
+ "fields": [
+  {
+   "fieldname": "wialon_unit_info_section",
+   "fieldtype": "Section Break",
+   "label": "Wialon Unit Info"
+  },
+  {
+   "fieldname": "unit_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit ID"
+  },
+  {
+   "fieldname": "unit_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit Name"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "last_update",
+   "fieldtype": "Datetime",
+   "label": "Last Update"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-14 02:15:21.139873",
+ "modified_by": "Administrator",
+ "module": "Components Core",
+ "name": "Wialon Tracked Unit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

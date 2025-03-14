@@ -1,0 +1,19 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h2>🔔 Wialon Notifications</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Time</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody id="notification-list">
+        <tr><td colspan="3">Loading...</td></tr>
+    </tbody>
+</table>
+
+<script src="/assets/wialon_notifications/js/wialon_notifications.js"></script>
+{% endblock %}

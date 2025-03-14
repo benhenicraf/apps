@@ -1,0 +1,43 @@
+<!-- map_controls.html -->
+<!-- Grok modified: Replaced templating with static text for simplicity -->
+<div class="map-controls">
+    <div class="btn-group">
+        <button class="btn btn-default btn-sm" 
+                onclick="cur_map.fitToMarkers()">
+            <i class="fa fa-crosshairs"></i>
+        </button>
+        <button class="btn btn-default btn-sm" 
+                onclick="cur_map.toggleFullscreen()">
+            <i class="fa fa-expand"></i>
+        </button>
+    </div>
+    <div class="position-display">
+        Lat: <span id="map-lat">0</span>, 
+        Lng: <span id="map-lng">0</span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="map-controls">
+    <div class="btn-group">
+        <button class="btn btn-default btn-sm" 
+                onclick="cur_map.fitToMarkers()">
+            <i class="fa fa-crosshairs"></i>
+        </button>
+        <button class="btn btn-default btn-sm" 
+                onclick="cur_map.toggleFullscreen()">
+            <i class="fa fa-expand"></i>
+        </button>
+    </div>
+    <div class="position-display">
+        ${ __("Lat") }: <span id="map-lat">0</span>, 
+        ${ __("Lng") }: <span id="map-lng">0</span>
+    </div>
+</div> -->

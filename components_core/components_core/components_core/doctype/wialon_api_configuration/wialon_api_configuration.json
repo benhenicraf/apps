@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-13 08:29:00.676628",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "api_config_parameters_section",
+  "api_token",
+  "session_id",
+  "last_authenticated",
+  "resource_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "api_config_parameters_section",
+   "fieldtype": "Section Break",
+   "label": "API Config Parameters"
+  },
+  {
+   "fieldname": "api_token",
+   "fieldtype": "Data",
+   "label": "API Token"
+  },
+  {
+   "fieldname": "session_id",
+   "fieldtype": "Data",
+   "label": "Session ID"
+  },
+  {
+   "fieldname": "resource_id",
+   "fieldtype": "Data",
+   "label": "Resource ID"
+  },
+  {
+   "fieldname": "last_authenticated",
+   "fieldtype": "Datetime",
+   "label": "Session Expiry Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-03-13 08:54:39.246139",
+ "modified_by": "Administrator",
+ "module": "Components Core",
+ "name": "Wialon API Configuration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

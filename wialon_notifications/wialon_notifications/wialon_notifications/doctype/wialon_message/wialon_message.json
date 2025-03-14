@@ -1,0 +1,58 @@
+{
+    "doctype": "DocType",
+    "name": "Wialon Message",
+    "module": "Wialon Notifications",
+    "autoname": "field:message_time",
+    "fields": [
+     {
+      "fieldname": "message_id",
+      "fieldtype": "Data",
+      "label": "Message ID",
+      "read_only": 1,
+      "in_list_view": 1
+     },
+     {
+      "fieldname": "unit_id",
+      "fieldtype": "Link",
+      "options": "Wialon Unit",
+      "label": "Unit",
+      "read_only": 1,
+      "in_list_view": 1
+     },
+     {
+      "fieldname": "message_time",
+      "fieldtype": "Datetime",
+      "label": "Message Time",
+      "read_only": 1,
+      "in_list_view": 1,
+      "reqd": 1
+     },
+     {
+      "fieldname": "direction",
+      "fieldtype": "Select",
+      "label": "Direction",
+      "options": "Incoming\nOutgoing",
+      "read_only": 1,
+      "in_list_view": 1
+     },
+     {
+      "fieldname": "content",
+      "fieldtype": "Text",
+      "label": "Content",
+      "read_only": 1
+     }
+    ],
+    "permissions": [
+     {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "report": 1
+     }
+    ],
+    "sort_field": "message_time",
+    "sort_order": "DESC"
+   }

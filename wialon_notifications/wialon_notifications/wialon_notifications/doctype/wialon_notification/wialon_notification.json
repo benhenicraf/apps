@@ -1,0 +1,68 @@
+{
+    "doctype": "DocType",
+    "name": "Wialon Notification",
+    "module": "Wialon Notifications",
+    "autoname": "field:event_time",
+    "fields": [
+     {
+      "fieldname": "template_id",
+      "fieldtype": "Data",
+      "label": "Template ID",
+      "read_only": 1,
+      "in_list_view": 1
+     },
+     {
+      "fieldname": "unit_id",
+      "fieldtype": "Data",
+      "label": "Unit ID",
+      "read_only": 1,
+      "in_list_view": 1
+     },
+     {
+      "fieldname": "event_time",
+      "fieldtype": "Datetime",
+      "label": "Event Time",
+      "read_only": 1,
+      "in_list_view": 1,
+      "reqd": 1
+     },
+     {
+      "fieldname": "type",
+      "fieldtype": "Data",
+      "label": "Type",
+      "read_only": 1,
+      "in_list_view": 1
+     },
+     {
+      "fieldname": "message",
+      "fieldtype": "Text",
+      "label": "Message",
+      "read_only": 1
+     },
+     {
+      "fieldname": "fuel_consumption",
+      "fieldtype": "Float",
+      "label": "Fuel Consumption (L)",
+      "read_only": 1
+     },
+     {
+      "fieldname": "emissions",
+      "fieldtype": "Float",
+      "label": "CO2 Emissions (kg)",
+      "read_only": 1
+     }
+    ],
+    "permissions": [
+     {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "report": 1
+     }
+    ],
+    "sort_field": "event_time",
+    "sort_order": "DESC"
+   }

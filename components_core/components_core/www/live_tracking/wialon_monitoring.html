@@ -1,0 +1,25 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Wialon Live Tracking{% endblock %}
+
+{% block page_content %}
+<div class="tracking-container">
+    <div class="unit-list">
+        <h3>Units</h3>
+        <ul id="unitList">
+            <!-- Dynamic Unit List -->
+        </ul>
+    </div>
+    <div id="map" class="tracking-map"></div>
+</div>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="/assets/components_core/css/wialon_monitor.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+SkWfFYEE8aRZy8u1gwtp9MyQne2G/5p3u5aXekJY=" crossorigin=""/>
+{% endblock %}
+
+{% block script %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1jFf+cH+2dbQkYsDm0Iw3apdUOP1ZTzNdrC+XGCs=" crossorigin=""></script>
+<script src="/assets/components_core/js/wialon_monitoring.js"></script>
+{% endblock %}

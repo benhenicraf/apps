@@ -1,0 +1,86 @@
+<!-- File: components_core/www/live_tracking/wialon_monitoring.html -->
+
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+    <div class="wialon-monitor-container">
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading-spinner">
+            <p>Loading live tracking data...</p>
+        </div>
+
+        <!-- Map Container -->
+        <div id="map" class="wialon-map" style="display: none; width: 100%; height: 500px;"></div>
+
+        <!-- Controls -->
+        <div class="tracking-controls">
+            <button id="pauseTracking" class="btn btn-warning">Pause</button>
+            <button id="resumeTracking" class="btn btn-success" style="display: none;">Resume</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script>
+        frappe.ready(function () {
+            setTimeout(() => {
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("map").style.display = "block";
+                initializeMap();
+            }, 2000);
+        });
+
+        function initializeMap() {
+            var map = L.map('map').setView([0, 0], 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            fetchLivePositions(map);
+        }
+
+        function fetchLivePositions(map) {
+            frappe.call({
+                method: "components_core.api.wialon_units.get_live_positions",
+                callback: function (response) {
+                    if (!response.message || response.message.length === 0) {
+                        frappe.msgprint("No live tracking data available.");
+                        return;
+                    }
+
+                    response.message.forEach(unit => {
+                        L.marker([unit.latitude, unit.longitude])
+                            .bindPopup(`${unit.name}<br>Speed: ${unit.speed} km/h<br>Last Updated: ${unit.last_updated}`)
+                            .addTo(map);
+                    });
+                }
+            });
+        }
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="/assets/components_core/css/wialon_monitor.css">
+{% endblock %}
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wialon Monitoring</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+</head>
+<body>
+    <div id="map" style="height:600px;width:100%;"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="/assets/components_core/js/wialon_monitoring.js"></script>
+</body>
+</html> -->

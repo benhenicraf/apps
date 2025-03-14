@@ -1,0 +1,104 @@
+/* File: components_core/public/css/map-style.css */
+
+.map-container {
+    position: relative;
+    height: calc(100vh - 150px);
+    margin: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Map Styling */
+#map {
+    height: 100%;
+    background: #f8f9fa;
+}
+
+/* Marker Styles */
+.equipment-marker .marker-content {
+    position: relative;
+    text-align: center;
+}
+
+.equipment-marker .marker-icon {
+    width: 28px;
+    height: 28px;
+    background: #3498db; /* Default Blue */
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Map Controls */
+.map-controls {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    background: rgba(255,255,255,0.9);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+
+
+/* .map-container {
+    position: relative;
+    height: calc(100vh - 150px);
+    margin: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#wialon-map {
+    height: 100%;
+    background: #f8f9fa;
+}
+
+.equipment-marker .marker-content {
+    position: relative;
+    text-align: center;
+}
+
+.equipment-marker .marker-icon {
+    width: 24px;
+    height: 24px;
+    background: #2ecc71;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.speed-badge {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e74c3c;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.map-controls {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    background: rgba(255,255,255,0.9);
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+} */
